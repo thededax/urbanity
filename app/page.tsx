@@ -3,6 +3,28 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+
+const testimonials = [
+  {
+    quote: "They don't just alter your hair; they architect a silhouette that completely reframes how the world perceives you. An absolute masterclass in quiet luxury.",
+    name: "Eleanor V.",
+    designation: "Editorial Director",
+    src: "https://i.ibb.co/d4pJKsDN/Chat-GPT-Image-Apr-28-2026-12-31-58-AM.png",
+  },
+  {
+    quote: "The attention to detail is unmatched. Kiran and his team transformed my look with such precision and artistry. It truly feels like a bespoke experience.",
+    name: "Ayesha K.",
+    designation: "Creative Consultant",
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuACmP_phXBKYX47vr035jkDqvVbVpDvYZ7hYutjJ4lXQxyXrOr0TW0b5Z2kOc908_p6xomVThjC729bQYI-xfS-WiHRgciYYkDy-JSVmde1MENjOrNJaFxIgZeg36jgZGH9QptfhFw1kDZFOXOoXYiNKuXD8Sygob4fn8koNKnACyIIJpkVe-Yrw-1q1q_Ai-TPMsYmjwi6DPgHfJT0HIlCZ-nAlerIKmc2pTTU19e3uyy-8zmebXG_rE-wwkLAevMWoW3NJiwkl46q",
+  },
+  {
+    quote: "Every visit is a retreat. The ambiance, the consultation, and the sheer talent of the stylists make it the only place I trust for my aesthetic needs.",
+    name: "Priya S.",
+    designation: "Founder, Luxe",
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBVkZY5PTLAST6nZ2lQhM7JA6Cov3RTzCtHEqpjC8iH508bqmdCstd0VSgCrXjsoKk9qc4BAi3TH4Vc60T5P5hDhc0QTlEtkDxZSAEiW84FPSel9vBu1ULZHCBP9BiGBHkSPAoJ4OjPPdWRsRFBK4-EecX7tFmpyIxuO2HiiWCWNkrRLVr-ENCBEul1H7A-xi9F5-IGaucCwVR1H_4GoZ5boYySa5fk3yPWkJQFc2V2fujRIRv-SxxQMKTgbW61z0VNa7FjYhAEF4pQ",
+  }
+];
 
 export default function HomePage() {
   return (
@@ -316,57 +338,11 @@ export default function HomePage() {
       </section>
 
       {/* Voices of Urbanity (Testimonials) */}
-      <section className="py-section-padding px-6">
-        <div className="max-w-container-max mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div 
-              className="relative aspect-[3/4] w-full max-w-md mx-auto lg:mx-0 overflow-hidden rounded-lg"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 1, ease: "easeOut" }}
-            >
-              <Image 
-                src="https://i.ibb.co/d4pJKsDN/Chat-GPT-Image-Apr-28-2026-12-31-58-AM.png" 
-                alt="Client Portrait" 
-                fill
-                className="object-cover" 
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
-            </motion.div>
-            
-            <motion.div 
-              className="flex flex-col justify-center"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-            >
-              <span className="font-section-head text-section-head text-primary block mb-stack-lg uppercase">Voices of Urbanity</span>
-              <blockquote className="mb-12 relative">
-                <span className="absolute -top-10 -left-6 text-7xl font-serif text-surface-bright leading-none opacity-50 select-none">&quot;</span>
-                <p className="font-h2-editorial text-[32px] md:text-h2-editorial text-on-background leading-tight relative z-10">
-                  They don&apos;t just alter your hair; they architect a silhouette that completely reframes how the world perceives you. An absolute masterclass in quiet luxury.
-                </p>
-              </blockquote>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-[1px] bg-primary"></div>
-                <div>
-                  <h4 className="font-cta-label text-cta-label text-on-surface uppercase">Eleanor V.</h4>
-                  <p className="font-body-main text-sm text-on-surface-variant">Editorial Director</p>
-                </div>
-              </div>
-              
-              {/* Navigation dots fake */}
-              <div className="flex gap-2 mt-16">
-                <div className="w-8 h-1 bg-primary rounded-full"></div>
-                <div className="w-8 h-1 bg-surface-bright rounded-full"></div>
-                <div className="w-8 h-1 bg-surface-bright rounded-full"></div>
-              </div>
-            </motion.div>
-          </div>
+      <section className="py-section-padding bg-surface-container-lowest">
+        <div className="max-w-container-max mx-auto px-6 text-center md:text-left mb-8 md:mb-0">
+          <span className="font-section-head text-section-head text-primary block uppercase tracking-widest">Voices of Urbanity</span>
         </div>
+        <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
       </section>
 
       {/* Editorial Social */}

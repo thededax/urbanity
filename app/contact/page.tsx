@@ -47,7 +47,7 @@ export default function ContactPage() {
             {/* Contact Cards (Bento Style) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
               {/* Call Card */}
-              <a href="tel:07411853015" className="bg-[#141414] border border-[#C9A84C]/10 p-6 flex items-center justify-between group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden rounded-sm">
+              <a href="tel:+918578060606" className="bg-[#141414] border border-[#C9A84C]/10 p-6 flex items-center justify-between group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#C9A84C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="w-12 h-12 rounded-full border border-[#C9A84C]/30 flex items-center justify-center bg-background group-hover:border-[#C9A84C] transition-colors duration-300">
@@ -55,7 +55,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-cta-label text-cta-label text-on-surface-variant mb-1">Call</p>
-                    <p className="font-body-main text-body-main text-on-surface tracking-wider">07411853015</p>
+                    <p className="font-body-main text-body-main text-on-surface tracking-wider">+91 8578060606</p>
                   </div>
                 </div>
                 <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary-container transition-colors duration-300 relative z-10">arrow_outward</span>
@@ -77,7 +77,7 @@ export default function ContactPage() {
               </a>
 
               {/* Instagram Card */}
-              <a href="https://instagram.com/urbanitysalon" target="_blank" rel="noopener noreferrer" className="bg-[#141414] border border-[#C9A84C]/10 p-6 flex items-center justify-between group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden sm:col-span-2 lg:col-span-1 rounded-sm">
+              <a href="https://www.instagram.com/urbanity_salon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="bg-[#141414] border border-[#C9A84C]/10 p-6 flex items-center justify-between group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden sm:col-span-2 lg:col-span-1 rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#C9A84C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="w-12 h-12 rounded-full border border-[#C9A84C]/30 flex items-center justify-center bg-background group-hover:border-[#C9A84C] transition-colors duration-300">

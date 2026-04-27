@@ -4,6 +4,15 @@ import Image from "next/image"
 import { useState } from "react"
 
 const galleryItems = [
+  { src: "/gallery/hair1.png", alt: "Hair Styling", category: "hair", title: "Signature Blowout" },
+  { src: "/gallery/hair2.png", alt: "Hair Cut", category: "hair", title: "Precision Cut" },
+  { src: "/gallery/hair3.png", alt: "Hair Color", category: "hair", title: "Color Transformation" },
+  { src: "/gallery/hair4.png", alt: "Hair Treatment", category: "hair", title: "Nourishing Treatment" },
+  { src: "/gallery/image1.png", alt: "Salon Environment", category: "interior", title: "Our Space" },
+  { src: "/gallery/image2.png", alt: "Salon Ambiance", category: "interior", title: "The Lounge" },
+  { src: "/gallery/image3.png", alt: "Salon Details", category: "interior", title: "Atelier Details", span: "md:col-span-2 md:row-span-2" },
+  { src: "/gallery/image4.png", alt: "Salon Environment", category: "interior", title: "Styling Stations" },
+  { src: "/gallery/image5.png", alt: "Salon Experience", category: "interior", title: "The Experience" },
   { src: "https://i.ibb.co/3mSJfP27/Chat-GPT-Image-Apr-27-2026-10-19-32-PM.png", alt: "Salon Interior", category: "interior", title: "The Atelier Space" },
   { src: "https://i.ibb.co/cc7W5wWV/Chat-GPT-Image-Apr-28-2026-12-25-17-AM.png", alt: "Team Photo", category: "interior", title: "Our Team", span: "md:col-span-2 md:row-span-2" },
   { src: "https://i.ibb.co/7NjTLpFP/Chat-GPT-Image-Apr-27-2026-10-16-43-PM.png", alt: "Nail Art", category: "nails", title: "Gilded Minimalism" },

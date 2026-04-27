@@ -8,6 +8,7 @@ import { FloatingWhatsApp } from '@/components/layout/floating-whatsapp';
 import GsapLenisSetup from '@/components/GsapLenisSetup';
 import { MobileStickyCTA } from '@/components/layout/mobile-sticky-cta';
 import { ScrollProgress } from '@/components/ui/scroll-progress';
+import { Preloader } from '@/components/ui/preloader';
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body className={`${cormorant.variable} ${cinzel.variable} ${dmSans.variable} ${notoSerif.variable} antialiased`} suppressHydrationWarning>
+        <Preloader />
         <ScrollProgress />
         <GsapLenisSetup />
         <Header />
