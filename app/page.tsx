@@ -16,13 +16,13 @@ const testimonials = [
     quote: "The attention to detail is unmatched. Kiran and his team transformed my look with such precision and artistry. It truly feels like a bespoke experience.",
     name: "Ayesha K.",
     designation: "Creative Consultant",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuACmP_phXBKYX47vr035jkDqvVbVpDvYZ7hYutjJ4lXQxyXrOr0TW0b5Z2kOc908_p6xomVThjC729bQYI-xfS-WiHRgciYYkDy-JSVmde1MENjOrNJaFxIgZeg36jgZGH9QptfhFw1kDZFOXOoXYiNKuXD8Sygob4fn8koNKnACyIIJpkVe-Yrw-1q1q_Ai-TPMsYmjwi6DPgHfJT0HIlCZ-nAlerIKmc2pTTU19e3uyy-8zmebXG_rE-wwkLAevMWoW3NJiwkl46q",
+    src: "https://i.ibb.co/DDcytst4/Chat-GPT-Image-Apr-28-2026-04-40-10-AM.png",
   },
   {
     quote: "Every visit is a retreat. The ambiance, the consultation, and the sheer talent of the stylists make it the only place I trust for my aesthetic needs.",
     name: "Priya S.",
     designation: "Founder, Luxe",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBVkZY5PTLAST6nZ2lQhM7JA6Cov3RTzCtHEqpjC8iH508bqmdCstd0VSgCrXjsoKk9qc4BAi3TH4Vc60T5P5hDhc0QTlEtkDxZSAEiW84FPSel9vBu1ULZHCBP9BiGBHkSPAoJ4OjPPdWRsRFBK4-EecX7tFmpyIxuO2HiiWCWNkrRLVr-ENCBEul1H7A-xi9F5-IGaucCwVR1H_4GoZ5boYySa5fk3yPWkJQFc2V2fujRIRv-SxxQMKTgbW61z0VNa7FjYhAEF4pQ",
+    src: "https://i.ibb.co/LD6jj4DR/Chat-GPT-Image-Apr-28-2026-04-37-05-AM.png",
   }
 ];
 
@@ -58,7 +58,7 @@ export default function HomePage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <span className="material-symbols-outlined text-primary text-base" style={{ fontVariationSettings: "'FILL' 1" }}>location_on</span>
+          <span className="material-symbols-outlined text-primary text-base icon-filled">location_on</span>
           <span className="font-cta-label text-[10px] text-on-surface tracking-[0.2em] uppercase">Bhagalpur&apos;s Premium Salon Experience</span>
         </motion.div>
 
@@ -130,11 +130,11 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-0.5 star-pulse">
-                  <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-primary text-sm icon-filled">star</span>
+                  <span className="material-symbols-outlined text-primary text-sm icon-filled">star</span>
+                  <span className="material-symbols-outlined text-primary text-sm icon-filled">star</span>
+                  <span className="material-symbols-outlined text-primary text-sm icon-filled">star</span>
+                  <span className="material-symbols-outlined text-primary text-sm icon-filled">star</span>
                 </div>
                 <span className="text-[11px] text-on-surface-variant font-cta-label tracking-[0.15em] uppercase">4.9/5 Rating</span>
                 <span className="text-on-surface-variant/30">•</span>

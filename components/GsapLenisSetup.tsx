@@ -1,11 +1,14 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 
 export default function GsapLenisSetup() {
+  const pathname = usePathname();
+
   useEffect(() => {
     // 1. Register ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
@@ -21,14 +24,18 @@ export default function GsapLenisSetup() {
 
     lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
+    const tickerCallback = (time: number) => {
       lenis.raf(time * 1000);
-    });
+    };
+    gsap.ticker.add(tickerCallback);
     gsap.ticker.lagSmoothing(0);
 
     document.documentElement.classList.add('js-loaded');
 
     const setupAnimations = () => {
+      // Kill existing scroll triggers to prevent memory leaks and conflicts on navigation
+      ScrollTrigger.getAll().forEach(t => t.kill());
+
       // ============================================================
       // OPENING ENTRANCE — Nav only (hero is handled by Framer Motion)
       // ============================================================
@@ -240,10 +247,10 @@ export default function GsapLenisSetup() {
         );
       });
 
-      // Refresh ScrollTrigger after fonts load
+      // Refresh ScrollTrigger after a short delay to ensure DOM is ready
       setTimeout(() => {
         ScrollTrigger.refresh();
-      }, 600);
+      }, 100);
     };
 
     // Execute animations
@@ -251,12 +258,11 @@ export default function GsapLenisSetup() {
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove((time) => {
-        lenis.raf(time * 1000);
-      });
+      gsap.ticker.remove(tickerCallback);
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
+

@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useState } from "react"
+import { motion, AnimatePresence } from "motion/react"
 
 const galleryItems = [
   { src: "/gallery/hair1.png", alt: "Hair Styling", category: "hair", title: "Signature Blowout" },
@@ -32,6 +33,27 @@ const galleryItems = [
 const categories = ["all", "hair", "makeup", "nails", "bridal", "interior"];
 const INITIAL_COUNT = 8;
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.9, y: 20 },
+  visible: { 
+    opacity: 1, 
+    scale: 1, 
+    y: 0,
+    transition: { duration: 0.6 }
+  }
+};
+
 export default function GalleryPage() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [showAll, setShowAll] = useState(false);
@@ -43,16 +65,26 @@ export default function GalleryPage() {
   return (
     <main className="flex-grow pt-[80px] md:pt-[100px] pb-section-padding">
       {/* Hero */}
-      <section className="max-w-container-max mx-auto px-6 md:px-gutter pt-8 md:pt-24 pb-stack-lg text-center">
+      <motion.section 
+        className="max-w-container-max mx-auto px-6 md:px-gutter pt-8 md:pt-24 pb-stack-lg text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <span className="font-section-head text-section-head text-primary mb-stack-sm uppercase tracking-widest block">Curated Portfolio</span>
         <h1 className="font-h1-editorial text-[36px] md:text-h1-editorial text-on-background mb-stack-md leading-tight">The Urbanity Experience</h1>
         <p className="font-body-main text-body-main text-on-surface-variant max-w-2xl mx-auto font-light">
            A visual journey through our artistry. Explore our curated collection of transformations, editorial looks, and the refined ambiance of our salon.
         </p>
-      </section>
+      </motion.section>
 
       {/* Filter Tabs */}
-      <section className="max-w-container-max mx-auto px-6 md:px-gutter pb-stack-lg">
+      <motion.section 
+        className="max-w-container-max mx-auto px-6 md:px-gutter pb-stack-lg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 border-b border-surface-variant pb-4">
           {categories.map((cat) => (
             <button
@@ -64,13 +96,23 @@ export default function GalleryPage() {
             </button>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* Gallery Grid */}
       <section className="max-w-container-max mx-auto px-4 md:px-gutter pb-section-padding">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 auto-rows-[180px] md:auto-rows-[250px]">
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 auto-rows-[180px] md:auto-rows-[250px]"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          key={activeFilter + showAll} // Re-animate when filter or showAll changes
+        >
           {displayed.map((item, i) => (
-            <div key={i} className={`group relative overflow-hidden bg-surface-container cursor-pointer rounded-lg ${item.span || ''}`}>
+            <motion.div 
+              key={i} 
+              variants={itemVariants}
+              className={`group relative overflow-hidden bg-surface-container cursor-pointer rounded-lg ${item.span || ''}`}
+            >
               <Image
                 src={item.src}
                 alt={item.alt}
@@ -83,9 +125,9 @@ export default function GalleryPage() {
                 <span className="font-cta-label text-[9px] md:text-cta-label text-primary uppercase tracking-widest mb-1 block">{item.category}</span>
                 <h3 className="font-h2-editorial text-sm md:text-xl text-on-background">{item.title}</h3>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {hasMore && (
           <div className="mt-12 md:mt-16 text-center">

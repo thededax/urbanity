@@ -8,7 +8,7 @@ export function FloatingWhatsApp() {
       rel="noopener noreferrer"
       className="hidden md:flex fixed bottom-8 right-8 w-14 h-14 bg-primary-container rounded-full items-center justify-center shadow-[0_0_20px_rgba(201,168,76,0.3)] hover:scale-110 transition-transform duration-300 z-40 group"
     >
-      <span className="material-symbols-outlined text-background text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>chat</span>
+      <span className="material-symbols-outlined text-background text-2xl icon-filled">chat</span>
     </Link>
   );
 }

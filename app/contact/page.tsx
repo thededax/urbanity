@@ -1,6 +1,5 @@
 'use client';
 
-import Link from "next/link";
 import Image from "next/image";
 
 export default function ContactPage() {
@@ -13,7 +12,7 @@ export default function ContactPage() {
     <main className="flex-grow pt-[100px] pb-section-padding md:pb-section-padding px-6 md:px-0">
       <div className="max-w-container-max mx-auto w-full">
         {/* Hero Section */}
-        <section className="py-stack-lg mb-section-padding flex flex-col items-center justify-center text-center relative mt-12 md:mt-24">
+        <section className="py-stack-lg mb-section-padding flex flex-col items-center justify-center text-center relative mt-12 md:mt-24 animate-fade-in-up">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-container/5 via-background to-background -z-10 w-full h-[150%] pointer-events-none"></div>
           <h2 className="font-section-head text-section-head text-primary-container mb-stack-sm tracking-[0.3em] uppercase">Connect</h2>
           <h1 className="font-h1-editorial text-h1-editorial text-on-surface max-w-3xl leading-tight">Visit Us / Book Your Session</h1>
@@ -25,18 +24,18 @@ export default function ContactPage() {
           {/* Left Column: Info & Cards (Spans 5 cols) */}
           <div className="lg:col-span-5 flex flex-col gap-stack-lg">
             {/* Address & Hours Block */}
-            <div className="bg-[#141414] border border-[#C9A84C]/10 p-8 flex flex-col gap-stack-md relative overflow-hidden group rounded-sm">
+            <div className="bg-[#141414] border border-[#C9A84C]/10 p-8 flex flex-col gap-stack-md relative overflow-hidden group rounded-sm animate-fade-in-up stagger-1">
               <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#C9A84C]/30 to-transparent"></div>
               <h3 className="font-section-head text-section-head text-primary-container tracking-widest uppercase">The Salon</h3>
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-primary-container text-xl mt-1" style={{ fontVariationSettings: "'FILL' 1" }}>location_on</span>
+                <span className="material-symbols-outlined text-primary-container text-xl mt-1 icon-filled">location_on</span>
                 <div>
                   <p className="font-body-main text-body-main text-on-surface">Sumrit Mandal Complex</p>
                   <p className="font-body-main text-body-main text-on-surface-variant">Tilkamanjhi, Bhagalpur</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-primary-container text-xl mt-1" style={{ fontVariationSettings: "'FILL' 1" }}>schedule</span>
+                <span className="material-symbols-outlined text-primary-container text-xl mt-1 icon-filled">schedule</span>
                 <div>
                   <p className="font-body-main text-body-main text-on-surface">Monday – Sunday</p>
                   <p className="font-body-main text-body-main text-on-surface-variant">10:00 AM – 9:00 PM</p>
@@ -47,7 +46,7 @@ export default function ContactPage() {
             {/* Contact Cards (Bento Style) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
               {/* Call Card */}
-              <a href="tel:+918578060606" className="bg-[#141414] border border-[#C9A84C]/10 p-6 flex items-center justify-between group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden rounded-sm">
+              <a href="tel:+918578060606" className="bg-[#141414] border border-[#C9A84C]/10 p-6 flex items-center justify-between group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden rounded-sm animate-fade-in-up stagger-2">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#C9A84C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="w-12 h-12 rounded-full border border-[#C9A84C]/30 flex items-center justify-center bg-background group-hover:border-[#C9A84C] transition-colors duration-300">
@@ -62,7 +61,7 @@ export default function ContactPage() {
               </a>
 
               {/* WhatsApp Card */}
-              <a href="https://wa.me/918578060606" target="_blank" rel="noopener noreferrer" className="bg-[#141414] border border-[#C9A84C]/10 p-6 flex items-center justify-between group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden rounded-sm">
+              <a href="https://wa.me/918578060606" target="_blank" rel="noopener noreferrer" className="bg-[#141414] border border-[#C9A84C]/10 p-6 flex items-center justify-between group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden rounded-sm animate-fade-in-up stagger-3">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#C9A84C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="w-12 h-12 rounded-full border border-[#C9A84C]/30 flex items-center justify-center bg-background group-hover:border-[#C9A84C] transition-colors duration-300">
@@ -77,7 +76,7 @@ export default function ContactPage() {
               </a>
 
               {/* Instagram Card */}
-              <a href="https://www.instagram.com/urbanity_salon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="bg-[#141414] border border-[#C9A84C]/10 p-6 flex items-center justify-between group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden sm:col-span-2 lg:col-span-1 rounded-sm">
+              <a href="https://www.instagram.com/urbanity_salon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="bg-[#141414] border border-[#C9A84C]/10 p-6 flex items-center justify-between group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden sm:col-span-2 lg:col-span-1 rounded-sm animate-fade-in-up stagger-4">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#C9A84C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="w-12 h-12 rounded-full border border-[#C9A84C]/30 flex items-center justify-center bg-background group-hover:border-[#C9A84C] transition-colors duration-300">
@@ -96,7 +95,7 @@ export default function ContactPage() {
           {/* Right Column: Form & Map (Spans 7 cols) */}
           <div className="lg:col-span-7 flex flex-col gap-stack-lg">
             {/* Booking Form */}
-            <div className="bg-[#141414] p-8 md:p-12 relative overflow-hidden group rounded-sm">
+            <div className="bg-[#141414] p-8 md:p-12 relative overflow-hidden group rounded-sm animate-fade-in-right stagger-2">
               <div className="absolute -top-32 -left-32 w-64 h-64 bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div>
               <h3 className="font-h2-editorial text-h2-editorial text-on-surface mb-stack-lg">Reserve Your Appointment</h3>
               
@@ -152,7 +151,7 @@ export default function ContactPage() {
             </div>
 
             {/* Map Image Placeholder */}
-            <div className="w-full h-80 bg-[#141414] border border-[#C9A84C]/10 relative overflow-hidden group rounded-sm">
+            <div className="w-full h-80 bg-[#141414] border border-[#C9A84C]/10 relative overflow-hidden group rounded-sm animate-scale-in stagger-4">
               <Image 
                 src="https://picsum.photos/seed/map1/800/400" 
                 alt="Map of Bhagalpur" 
